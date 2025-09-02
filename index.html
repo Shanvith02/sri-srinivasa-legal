@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sri Srinivasa Legal Consultancy & Translations</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Headings & Body -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-navy:#0a2342;
+      --brand-muted:#eef2f7;
+      --card-shadow:0 6px 16px rgba(0,0,0,.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;color:#222}
+    h1,h2,h3,.navbar-brand{font-family:"Playfair Display",Georgia,"Times New Roman",serif}
+    .navbar{background:#0a2342}
+    .navbar .nav-link{color:#fff!important;opacity:.9}
+    .navbar .nav-link:hover{opacity:1}
+    header.hero{
+      background:linear-gradient(135deg, #0a2342 0%, #173b6d 100%);
+      color:#fff;
+      padding:120px 0 90px;
+      text-align:center;
+    }
+    header .lead{opacity:.9; max-width:850px; margin:16px auto 0}
+    section{padding:70px 0; scroll-margin-top:90px}
+    .section-muted{background:var(--brand-muted)}
+    .card.service{
+      border:0; box-shadow:var(--card-shadow); height:100%;
+      border-radius:16px; padding:22px;
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .card.service:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,.12)}
+    .team-photo{
+      width:220px; height:220px; object-fit:cover; border-radius:50%;
+      box-shadow:0 10px 24px rgba(0,0,0,.15);
+      margin:10px auto 0;
+    }
+    .img-gap-grid{
+      display:grid; gap:22px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+    .img-tile{
+      aspect-ratio:16/10; background:#fff; border-radius:18px;
+      box-shadow:var(--card-shadow); display:flex; align-items:center; justify-content:center;
+      padding:10px; overflow:hidden;
+    }
+    .img-tile img{width:100%; height:100%; object-fit:cover; border-radius:14px}
+    footer{background:var(--brand-navy); color:#fff; padding:26px 0; text-align:center}
+    .btn-brand{background:#173b6d; color:#fff; border:0}
+    .btn-brand:hover{background:#1d4886; color:#fff}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="#home"></a> <!-- text will appear on scroll -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+/* Keep navbar brand white on scroll */
+.navbar .navbar-brand {
+    font-family: 'Playfair Display', Georgia, serif; /* same font as hero */
+    color: white; /* default color */
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: white !important; /* force white on scroll */
+}
+</style>
+
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="container">
+    <h1 id="hero-title" class="display-5 fw-bold">Sri Srinivasa Legal Consultancy & Translations</h1>
+    <p class="lead" id="hero-motto">Trusted Legal Services for Every Need</p>
+    <div class="mt-4">
+      <a href="#contact" class="btn btn-brand btn-lg rounded-pill px-4">Book a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<!-- Custom JS for Navbar Scroll Animation -->
+<script>
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const brand = navbar.querySelector('.navbar-brand');
+    const hero = document.getElementById('home');
+
+    if (window.scrollY > hero.offsetHeight - 90) { 
+        navbar.classList.add('scrolled');
+        brand.textContent = document.getElementById('hero-title').textContent; // animate hero heading into navbar
+    } else {
+        navbar.classList.remove('scrolled');
+        brand.textContent = ''; // hide text when at top
+    }
+});
+</script>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Left -->
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p class="mt-3">
+          At <b>Sri Srinivasa Legal Consultancy & Translations</b>, we provide 
+          <b>clear, reliable, and client-focused legal services</b>. 
+          Our mission is to simplify legal issues and guide you with 
+          practical solutions tailored to your needs.
+        </p>
+        <p>
+          Led by <b>Mr. S. Srinivas (M.Sc., L.L.M.)</b>, with years of experience 
+          in <b>civil, criminal, family, property, and corporate law</b>, 
+          we ensure professional representation and legal guidance.
+        </p>
+        <p>
+          Alongside, <b>Ms. K. Kowsalya (M.C.A., M.Tech.)</b> manages our 
+          <b>documentation & translations</b> division, delivering 
+          accurate and confidential drafting and language services 
+          in <b>Telugu ↔ English</b>.
+        </p>
+      </div>
+
+      <!-- Image Right -->
+      <div class="col-md-6 text-center">
+        <img src="C:\Users\SHANVITH\OneDrive\Desktop\legal site\law.jpg" alt="S. Srinivas" class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- APPROACH -->
+<!-- Approach Section -->
+<section id="approach" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Our Approach</h2>
+    <p class="mb-5">
+      At <b>Sri Srinivasa Legal Consultancy & Translations</b>, we believe in delivering 
+      legal services that are <b>simple, transparent, and focused on our clients</b>. 
+      Our approach ensures clarity and confidence at every step.
+    </p>
+
+    <div class="row g-4">
+      <!-- Step 1 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-user-tie fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title">1. Personal Consultation</h5>
+            <p class="card-text">We listen carefully to understand your concerns and legal needs in detail.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-balance-scale fa-2x text-success"></i>
+            </div>
+            <h5 class="card-title">2. Clear Guidance</h5>
+            <p class="card-text">We simplify complex laws and provide clear direction for your case.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-lightbulb fa-2x text-warning"></i>
+            </div>
+            <h5 class="card-title">3. Practical Solutions</h5>
+            <p class="card-text">We design strategies that are realistic, effective, and tailored to your situation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fas fa-handshake fa-2x text-danger"></i>
+            </div>
+            <h5 class="card-title">4. Trusted Support</h5>
+            <p class="card-text">From consultation to resolution, we stand by your side at every stage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+<!-- SERVICES -->
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Our Services</h2>
+    <p class="mb-5">
+      We offer a wide range of legal and documentation services to meet the diverse needs of our clients.
+      Every service is delivered with <b>professionalism, accuracy, and confidentiality</b>.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Service 1: Civil & Criminal Matters -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#civilCriminal" aria-expanded="false" aria-controls="civilCriminal">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-gavel fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Civil & Criminal Matters
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Representation and guidance in disputes, litigation, and defense...
+            </p>
+            <div class="collapse mt-2" id="civilCriminal">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Litigation & court representation</li>
+                  <li>Dispute resolution and settlements</li>
+                  <li>Legal advice for personal & business matters</li>
+                  <li>Defense strategies and documentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: Property & Real Estate Law -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#propertyLaw" aria-expanded="false" aria-controls="propertyLaw">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-building fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Property & Real Estate Law
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Drafting, verification, and legal opinions for property transactions...
+            </p>
+            <div class="collapse mt-2" id="propertyLaw">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Property purchase and sale agreements</li>
+                  <li>Title verification and legal opinions</li>
+                  <li>Dispute resolution & property litigation</li>
+                  <li>Registration and compliance guidance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: Family Law -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#familyLaw" aria-expanded="false" aria-controls="familyLaw">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-users fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Family Law
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Support in matrimonial, divorce, maintenance, custody, and inheritance matters...
+            </p>
+            <div class="collapse mt-2" id="familyLaw">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Matrimonial and divorce cases</li>
+                  <li>Child custody and maintenance</li>
+                  <li>Inheritance and property disputes</li>
+                  <li>Legal advice and documentation support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4: Corporate & Business Law -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#corporateLaw" aria-expanded="false" aria-controls="corporateLaw">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-briefcase fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Corporate & Business Law
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Legal assistance for companies, contracts, and compliance...
+            </p>
+            <div class="collapse mt-2" id="corporateLaw">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Company registration and compliance</li>
+                  <li>Drafting contracts and agreements</li>
+                  <li>Corporate litigation and advisory</li>
+                  <li>Business dispute resolution</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5: Documentation & Advisory -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#documentation" aria-expanded="false" aria-controls="documentation">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-file-alt fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Documentation & Advisory
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Drafting agreements, affidavits, legal notices, and opinions...
+            </p>
+            <div class="collapse mt-2" id="documentation">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Agreements and contracts</li>
+                  <li>Affidavits and legal notices</li>
+                  <li>Professional legal opinions</li>
+                  <li>Advisory support for individuals & businesses</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6: Translation of Legal Documents -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 service-card" data-bs-toggle="collapse" data-bs-target="#translation" aria-expanded="false" aria-controls="translation">
+          <div class="card-body position-relative">
+            <div class="mb-3 text-center">
+              <i class="fas fa-language fa-2x text-primary"></i>
+            </div>
+            <h5 class="card-title text-center">
+              Translation of Legal Documents
+            </h5>
+            <i class="fas fa-chevron-down rotate-icon position-absolute top-0 end-0 m-3"></i>
+            <p class="card-text text-center">
+              Accurate translations between Telugu and English...
+            </p>
+            <div class="collapse mt-2" id="translation">
+              <div class="text-muted text-start">
+                <ul class="mb-0">
+                  <li>Telugu ↔ English translations</li>
+                  <li>Refined copies (English ↔ English)</li>
+                  <li>Telugu ↔ Telugu legal documents</li>
+                  <li>Confidential and precise translations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Custom CSS for Hover, Arrow & Alignment -->
+<style>
+.service-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+.service-card .collapse ul {
+    padding-left: 1rem;
+    margin: 0;
+}
+.service-card .collapse ul li {
+    list-style-position: inside;
+}
+
+/* Smaller rotating arrow */
+.rotate-icon {
+    font-size: 0.9rem; /* smaller arrow size */
+    transition: transform 0.3s ease;
+}
+
+/* Arrow rotates when corresponding collapse is shown */
+.service-card.collapsing .rotate-icon,
+.service-card .collapse.show + .rotate-icon {
+    transform: rotate(180deg);
+}
+</style>
+
+
+<!-- Team Section -->
+<section id="team" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Legal & Documentation Heads</h2>
+    <p class="mb-5">
+      Our key professionals driving excellence in legal consultancy and documentation services.
+    </p>
+
+    <div class="row justify-content-center">
+      
+      <div class="col-md-6 mb-4">
+        <h5 class="team-name">S. Srinivas</h5>
+        <p class="text-muted mb-3">M.Sc., L.L.M.</p>
+        <hr>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <h5 class="team-name">K. Kowsalya</h5>
+        <p class="text-muted mb-3">M.C.A., M.Tech.</p>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+.team-name {
+    font-family: 'Roboto', serif; /* new font */
+    font-weight: 800; /* optional: make it bolder */
+    font-size: 2rem; /* adjust size */
+    color: #0a2342; /* optional: change color */
+}
+hr {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    width: 50%;
+    margin: 1rem auto;
+}
+</style>
+
+
+<!-- Contact Us Section -->
+<!-- ===== Include once in <head> (icons + fonts, if not already there) ===== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- ===== CONTACT US SECTION ===== -->
+<section id="contact" class="section-muted py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Contact Details -->
+      <div class="col-lg-6 mb-4">
+        <h2 class="mb-4 display-5 fw-bold" style="font-family:'Playfair Display', serif;">Contact Us</h2>
+
+        <!-- Phone -->
+        <div class="mb-3 d-flex align-items-start">
+          <i class="fas fa-phone-alt me-3 contact-icon phone-icon" aria-hidden="true"></i>
+          <div>
+            <strong>Phone</strong><br>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#phoneModal" class="text-decoration-none text-dark">
+              +91 8978887109
+            </a>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3 d-flex align-items-start">
+          <i class="fas fa-map-marker-alt me-3 contact-icon address-icon" aria-hidden="true"></i>
+          <div>
+            <strong>Address</strong><br>
+            Thotavari Street, Nandamuri Nagar, Vijayawada - 520015
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="col-lg-6 text-center">
+        <!-- Replace the src with your actual image path -->
+        <img src="C:\Users\SHANVITH\OneDrive\Desktop\legal site\ChatGPT Image Sep 1, 2025, 06_34_32 PM.png" alt="Sri Srinivasa Legal — Contact" class="img-fluid rounded-3 shadow" style="max-height:420px; object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Phone Modal (Call / WhatsApp) ===== -->
+<div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="phoneModalLabel">Contact via</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-4">
+        <a href="tel:8978887109" class="btn btn-primary m-2">Call</a>
+        <a href="https://wa.me/918978887109" target="_blank" class="btn btn-success m-2">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Optional: Section-specific styles ===== -->
+<style>
+  #contact a:hover { text-decoration: underline; }
+
+  .contact-icon {
+    font-size: 1.2rem;         /* smaller icons */
+    margin-top: 4px;           /* align with text block */
+  }
+  .phone-icon { color: #000; } /* phone icon in black (as requested) */
+  .address-icon { color: #0d6efd; } /* themed blue for address */
+</style>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <small>&copy; 2025 Sri Srinivasa Legal Consultancy & Translations. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
